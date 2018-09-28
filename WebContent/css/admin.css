@@ -1,0 +1,396 @@
+/* --------------------
+郢晏ｸ吶Σ郢晢ｽｼ隴弱ｅ竊楢叉迢暦ｽｷ螢ｼ�ｽｼ霈費ｿ･邵ｺ貅假ｽ∫ｸｺ�ｽｮ郢ｧ�ｽｵ郢晢ｽｳ郢晏干ﾎ晉ｹｧ�ｽｳ郢晢ｽｼ郢晢ｿｽ
+.menu_box::after {
+  position: absolute;
+  bottom: 遶擾ｿｽ2px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background: #fdfcff;
+  transform: scale(0, 1);
+  transform-origin: left top;
+  transition: transform .3s;
+}
+.menu_icon:hover::after {
+  transform: scale(1, 1);
+}
+
+---------------------*/
+body {
+	position: absolute;
+	overflow: auto;
+	top: 0;
+	left: 0;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 20px;
+	background-image: url("../images/background/color.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	box-shadow: inset 0 0 15px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* �ｿｽ�ｽｿ�ｽｽE�ｿｽ�ｽｿ�ｽｽJ�ｿｽ�ｽｿ�ｽｽ�ｿｽ�ｽｿ�ｽｽ�ｿｽ�ｽｿ�ｽｽ�ｿｽ�ｽｿ�ｽｽ adminHeader.jsp */
+#logo {
+	width: 45%;
+	height: 45%;
+}
+
+#logo:hover {
+	opacity: 0.7;
+}
+
+#left {
+	float: left;
+	height: 100vh;
+	width: 15%;
+	background-color: rgba(0, 0, 0, 0.8);
+	position: fixed;
+	z-index: 266;
+	top: 0px;
+	left: 0px;
+}
+
+#header-title {
+	margin: 0;
+	padding: 5%;
+	height: 20%;
+	background-color: #f7f9ff;
+	text-align: center;
+	vertical-align: center;
+	line-height: 3%;
+}
+
+#header-title h2 {
+	font-size: 25px;
+}
+
+#header-title h4 {
+	font-size: 10px;
+}
+
+.menu_box {
+	/*  border: 1px solid #f7f9ff; */
+	margin: 10% 10% 15% 10%;
+	color: #f7f9ff;
+}
+
+.menu_box:hover {
+	opacity: 0.4;
+	filter: alpha(opacity = 60);
+	-moz-opacity: 0.6;
+}
+
+.menu_icon {
+	width: 15%;
+	height: 15%;
+	float: left;
+	margin-right: 8%;
+}
+
+.header_menu p {
+	font-size: 4px;
+	float: left;
+}
+
+.menu_box a {
+	text-decoration: none;
+	font-color: #f7f9ff:
+}
+
+.others h3 {
+	border-left: 4px solid #c0c0c7;
+	border-bottom: 1px solid #c0c0c7;
+	color: #a9aaaf;
+	margin: 20% 10% 10% 10%;
+	padding-left: 5%;
+}
+
+ul {
+	clear: both;
+}
+
+/* admin 蜿ｳ蛛ｴ繧ｳ繝ｳ繝�繝ｳ繝�逕ｨ*/
+#right {
+	float: left;
+	width: 100%;
+	color: #fff;
+	position: absolute;
+}
+
+#footer {
+	float: right;
+	margin: 5% 3% 30% 0%;
+	padding-bottom: 2%;
+}
+
+.main-box {
+	text-align: center;
+}
+
+.main-box h1 {
+	position: relative;
+	font-size: 65px;
+	text-align: center;
+	padding-top: 5%;
+}
+
+.main-box h4 {
+	position: relative;
+	font-size: 40px;
+	text-align: center;
+}
+
+.message {
+	text-align: center;
+	margin-left: 30%;
+}
+
+.error .error-message {
+	color: rgb(255, 0, 0);
+}
+
+.fadeInDown {
+	-webkit-animation-name: fadeInDown;
+	animation-name: fadeInDown;
+}
+
+
+/* 蝠�蜩∽ｸ�隕ｧ  */
+#product-list img {
+	width: 100%;
+	max-height: 1000px;
+	overflow: hidden;
+	margin: 0;
+	border-radius: 8% 20% 15% 15%;
+}
+
+#product-list {
+	text-align: center;
+}
+
+/* 蝠�蜩∬ｩｳ邏ｰ  */
+.product_details {
+	text-align: center;
+}
+
+.image_container {
+	margin-bottom: 5%;
+}
+
+.product_image_box {
+	width: 80%;
+	min-height: 22.750rem;
+	margin: 0;
+	padding: 0;
+	border: 4px solid #000000;
+	border-radius: 5%;
+	box-sizing: border-box;
+	overflow: hidden;
+	border-radius: 5%;
+}
+
+.product_image {
+	width: 100%;
+	min-height: 22.750rem;
+	margin: 0;
+	padding: 0;
+}
+
+#recommend_box {
+	text-align: center;
+}
+
+.recommend {
+	position: relative;
+	float: left;
+	display: inline-block;
+	width: 33%;
+	padding: 1%;
+	box-sizing: border-box;
+}
+
+.recommend_box_img {
+	width: 100%;
+	max-height: 16.750rem;
+	margin: 0;
+	padding: 0;
+	border: 4px solid #000000;
+	border-radius: 5%;
+	box-sizing: border-box;
+	overflow: hidden;
+	border-radius: 5%;
+}
+
+.recommend_box_img:hover{
+    opacity: 0.75;
+    transition: 0.4s;
+}
+
+.item-image-box {
+	width: 100%;
+	min-height: 16.750rem;
+	margin: 0;
+	padding: 0;
+}
+
+/* 繝ｦ繝ｼ繧ｶ繝ｼ荳�隕ｧ縲�*/
+#form-user-info-list {
+	text-align: center;
+}
+
+/* 蜈ｨ繝�繝ｼ繧ｿ陦ｨ遉ｺ逕ｨ  */
+#contents-data {
+	background-color: rgba(255, 255, 255, 0.9);
+	color: rgb(0, 0, 0);
+	font-size: 20px;
+	font-weight: bold;
+	width: 64%;
+	margin: 10% 20%;
+	overflow: auto;
+	padding: 5% 5%;
+	box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+#contents-data h2 {
+	border-left: 8px solid #000000;
+	padding-left: 1.2%;
+}
+
+/*  繝�繝ｼ繝悶Ν繝ｻ繝ｪ繧ｹ繝育ｳｻ   */
+.horizontal-list-table {
+	color: rgb(0, 0, 0);
+}
+
+.vertical-list-table {
+	text-align: center;
+}
+
+.vertical-list-table td {
+	width: 15px;
+	padding: 10px;
+	color: rgb(0, 0, 0);
+	font-size: 0.8em;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.vertical-list-table span {
+	font-size: 15px;
+}
+
+.vertical-list-table th {
+	width: 150px;
+	padding: 10px;
+	color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+	font-weight: bold;
+	font-size: 0.8em;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.vertical-list-table td {
+	width: 500px;
+	text-align: left;
+}
+
+table.horizontal-list-table, th, td {
+	margin: 3%;
+	width: 100%;
+	color: rgb(0, 0, 0);
+	border-collapse: collapse;
+	border: 1.5px solid #c0c0c0;
+	line-height: 1.5;
+	white-space: nowrap;
+}
+
+table.horizontal-list-table th {
+	width: 150px;
+	padding: 10px;
+	color: rgb(255, 255, 255);
+	background-color: rgb(0, 0, 0);
+	font-weight: bold;
+	font-size: 0.8em;
+	text-align: center;
+	white-space: nowrap;
+}
+
+table.horizontal-list-table td {
+	width: 15px;
+	padding: 10px;
+	color: rgb(0, 0, 0);
+	font-size: 0.8em;
+	text-align: center;
+	white-space: nowrap;
+}
+
+/* 繝懊ち繝ｳ邉ｻ  */
+#edit {
+	text-align: center;
+}
+
+.edit_box {
+	width: 30%;
+	height: 30%;
+	float: left;
+	margin: 5% 10% 8% 10%;
+}
+
+.edit_icon {
+	width: 30%;
+	height: 30%;
+	text-align: center;
+	margin-right: 8%;
+}
+
+.edit_box a {
+	width: 30%;
+	height: 30%;
+	text-decoration: none;
+	text-align: center;
+	font-color: #000000:
+}
+
+.button_base {
+	margin: 0;
+	border: 0;
+	font-size: 12px;
+	position: relative;
+	top: 50%;
+	left: 50%;
+	margin-top: 15px;
+	margin-left: -100px;
+	width: 130px;
+	height: 40px;
+	text-align: center;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-user-select: none;
+	cursor: default;
+	outline: none;
+}
+
+.button_base:hover {
+	cursor: pointer;
+	outline: none;
+}
+
+.edit_btn {
+	color: #000000;
+	border: #000000 solid 1px;
+	padding: 8px;
+	background-color: #ffffff;
+}
+
+.edit_btn:hover {
+	color: #ffffff;
+	background-color: #000000;
+	outline: none;
+}

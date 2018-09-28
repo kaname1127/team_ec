@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.ui.theme" value="simple"/>
+	<constant name="struts.devMode" value="true"/>
+
+	<package name="com.internousdev.bioral.action" extends="struts-default">
+
+
+	<!-- 以下Action -->
+	<!-- Home関係 -->
+	<action name="HomeAction" class="com.internousdev.bioral.action.HomeAction" method="execute">
+		<result name="success">home.jsp</result>
+	</action>
+
+
+	<!-- ログイン関係 -->
+	<action name="GoLoginAction" class="com.internousdev.bioral.action.GoLoginAction" method="execute">
+		<result name="success">login.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+	<action name="LoginAction" class="com.internousdev.bioral.action.LoginAction" method="execute">
+		<result name="success">home.jsp</result>
+		<result name="settlement">settlementConfirm.jsp</result>
+		<result name="admin">admin.jsp</result>
+		<result name="error">login.jsp</result>
+	</action>
+
+	<action name="LogoutAction" class="com.internousdev.bioral.action.LogoutAction" method="execute">
+		<result name="success">index.jsp</result>
+		<result name="error">index.jsp</result>
+	</action>
+
+
+	<!-- ユーザー登録関係 -->
+	<action name="CreateUserAction" class="com.internousdev.bioral.action.CreateUserAction" method="execute">
+		<result name="success">createUser.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+	<action name="CreateUserConfirmAction" class="com.internousdev.bioral.action.CreateUserConfirmAction" method="execute">
+		<result name="success">createUserConfirm.jsp</result>
+		<result name="error">createUser.jsp</result>
+	</action>
+
+	<action name="CreateUserCompleteAction" class="com.internousdev.bioral.action.CreateUserCompleteAction" method="execute">
+		<result name="success">createUserComplete.jsp</result>
+		<result name="error">createUser.jsp</result>
+	</action>
+
+
+	<!-- パスワード再設定関係 -->
+	<action name="ResetPasswordAction" class="com.internousdev.bioral.action.ResetPasswordAction" method="execute">
+		<result name="success">resetPassword.jsp</result>
+		<result name="error">login.jsp</result>
+	</action>
+
+	<action name="ResetPasswordConfirmAction" class="com.internousdev.bioral.action.ResetPasswordConfirmAction" method="execute">
+		<result name="success">resetPasswordConfirm.jsp</result>
+		<result name="error">resetPassword.jsp</result>
+	</action>
+
+	<action name="ResetPasswordCompleteAction" class="com.internousdev.bioral.action.ResetPasswordCompleteAction" method="execute">
+	    <interceptor-ref name="token"></interceptor-ref>
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+		<result name="invalid.token">resetPasswordComplete.jsp</result>
+		<result name="success">resetPasswordComplete.jsp</result>
+		<result name="error">resetPassword.jsp</result>
+	</action>
+
+
+	<!-- 商品検索関係 -->
+	<action name="SearchItemAction" class="com.internousdev.bioral.action.SearchItemAction" method="execute">
+		<result name="success">productList.jsp</result>
+		<result name="error">productList.jsp</result>
+	</action>
+
+
+	<!-- 商品ページ関係 -->
+	<action name="ProductListAction" class="com.internousdev.bioral.action.ProductListAction" method="execute">
+		<result name="success">productList.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+	<action name="ProductDetailsAction" class="com.internousdev.bioral.action.ProductDetailsAction" method="execute">
+		<result name="success">productDetails.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+
+	<!-- 商品レビュー関係 -->
+	<action name="ReviewAction" class="com.internousdev.bioral.action.ReviewAction" method="execute">
+		<result name="success">reviewComplete.jsp</result>
+		<result name="error">productDetails.jsp</result>
+	</action>
+
+
+	<!-- カート関係. -->
+	<action name="CartAction" class="com.internousdev.bioral.action.CartAction" method="execute">
+		<result name="success">cart.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+	<action name="AddCartAction" class="com.internousdev.bioral.action.AddCartAction" method="execute">
+		<interceptor-ref name="token"></interceptor-ref>
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+		<result name="invalid.token">cart.jsp</result>
+		<result name="success">cart.jsp</result>
+		<result name="error">home.jsp</result>
+		<result name="input">cart.jsp</result>
+	</action>
+
+	<action name="DeleteCartAction" class="com.internousdev.bioral.action.DeleteCartAction" method="execute">
+		<result name="success">cart.jsp</result>
+		<result name="error">cart.jsp</result>
+	</action>
+
+
+	<!-- 決済関係 -->
+	<action name="SettlementConfirmAction" class="com.internousdev.bioral.action.SettlementConfirmAction" method="execute">
+		<result name="success">settlementConfirm.jsp</result>
+		<result name="error">login.jsp</result>
+	</action>
+
+	<action name="SettlementCompleteAction" class="com.internousdev.bioral.action.SettlementCompleteAction" method="execute">
+		<interceptor-ref name="token"></interceptor-ref>
+		<interceptor-ref name="defaultStack"></interceptor-ref>
+		<result name="invalid.token">settlementComplete.jsp</result>
+		<result name="success">settlementComplete.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+
+	<!-- 宛先登録関係 -->
+	<action name="CreateDestinationAction" class="com.internousdev.bioral.action.CreateDestinationAction" method="execute">
+		<result name="success">createDestination.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+	<action name="CreateDestinationConfirmAction" class="com.internousdev.bioral.action.CreateDestinationConfirmAction" method="execute">
+		<result name="success">createDestinationConfirm.jsp</result>
+		<result name="error">createDestination.jsp</result>
+	</action>
+
+	<action name="CreateDestinationCompleteAction" class="com.internousdev.bioral.action.CreateDestinationCompleteAction" method="execute">
+		<result name="success">createDestinationComplete.jsp</result>
+		<result name="error">createDestination.jsp</result>
+	</action>
+
+
+	<!-- マイページ関係 -->
+	<action name="MyPageAction" class="com.internousdev.bioral.action.MyPageAction" method="execute">
+		<result name="success">myPage.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+	<action name="PurchaseHistoryAction" class="com.internousdev.bioral.action.PurchaseHistoryAction" method="execute">
+		<result name="success">purchaseHistory.jsp</result>
+	</action>
+
+	<action name="DeletePurchaseHistoryAction" class="com.internousdev.bioral.action.DeletePurchaseHistoryAction" method="execute">
+		<result name="success">purchaseHistory.jsp</result><!-- 変更前:createUser.jsp -->
+		<result name="error">home.jsp</result>
+	</action>
+
+
+	<!-- 管理者ページ関係 -->
+	<action name="GoAdminAction" class="com.internousdev.bioral.action.GoAdminAction" method="execute">
+		<result name="success">admin.jsp</result>
+		<result name="error">home.jsp</result>
+	</action>
+
+
+	<!-- 管理者ページ - 商品登録関係 -->
+	<action name="CreateProductAction" class="com.internousdev.bioral.action.CreateProductAction" method="execute">
+		<result name="success">createProduct.jsp</result>
+		<result name="error">admin.jsp</result>
+	</action>
+
+	<action name="CreateProductConfirmAction" class="com.internousdev.bioral.action.CreateProductConfirmAction" method="execute">
+		<result name="success">createProductConfirm.jsp</result>
+		<result name="error">createProduct.jsp</result>
+	</action>
+
+	<action name="CreateProductCompleteAction" class="com.internousdev.bioral.action.CreateProductCompleteAction" method="execute">
+		<result name="success">createProductComplete.jsp</result>
+		<result name="error">createProduct.jsp</result>
+	</action>
+
+
+	<!-- 管理者ページ-商品一覧関係 -->
+	<action name="AdminProductSelectAction" class="com.internousdev.bioral.action.AdminProductSelectAction" method="execute">
+		<result name="success">adminProductList.jsp</result>
+		<result name="error">admin.jsp</result>
+	</action>
+
+	<action name="AdminProductDetailAction" class="com.internousdev.bioral.action.AdminProductDetailAction" method="execute">
+		<result name="success">adminProductDetail.jsp</result>
+		<result name="error">adminProductList.jsp</result>
+	</action>
+
+
+	<!-- 管理者ページ-商品更新関係 -->
+	<action name="ProductUpdateAction" class="com.internousdev.bioral.action.ProductUpdateAction" method="execute">
+		<result name="success">productUpdate.jsp</result>
+		<result name="error">adminProductList.jsp</result>
+	</action>
+
+	<action name="ProductUpdateConfirmAction" class="com.internousdev.bioral.action.ProductUpdateConfirmAction" method="execute">
+		<result name="success">productUpdateConfirm.jsp</result>
+		<result name="error">productUpdate.jsp</result>
+	</action>
+
+	<action name="ProductUpdateCompleteAction" class="com.internousdev.bioral.action.ProductUpdateCompleteAction" method="execute">
+		<result name="success">productUpdateComplete.jsp</result>
+		<result name="error">productUpdate.jsp</result>
+	</action>
+
+
+	<!-- 管理者ページ-商品削除関係 -->
+	<action name="AdminProductDeleteAction" class="com.internousdev.bioral.action.AdminProductDeleteAction" method="execute">
+		<result name="success">adminproductDelete.jsp</result>
+		<result name="error">adminProductList.jsp</result>
+	</action>
+	<action name="AdminProductDeleteCompleteAction" class="com.internousdev.bioral.action.AdminProductDeleteCompleteAction" method="execute">
+		<result name="success">adminProductDeleteComplete.jsp</result>
+		<result name="error">adminProductDetail.jsp</result>
+	</action>
+
+
+	<!-- 管理者ページ-購入履歴一覧関係 -->
+	<action name="AdminPurchaseHistoryAction" class="com.internousdev.bioral.action.AdminPurchaseHistoryAction" method="execute">
+		<result name="success">adminPurchaseHistory.jsp</result>
+		<result name="error">admin.jsp</result>
+	</action>
+
+
+	<!-- 管理者ページ - ユーザー登録関係 -->
+	<action name="UserRegistAction" class="com.internousdev.bioral.action.UserRegistAction" method="execute">
+		<result name="success">userRegist.jsp</result>
+		<result name="error">admin.jsp</result>
+	</action>
+
+
+	<action name="UserRegistConfirmAction" class="com.internousdev.bioral.action.UserRegistConfirmAction" method="execute">
+		<result name="success">userRegistConfirm.jsp</result>
+		<result name="error">userRegist.jsp</result>
+	</action>
+
+	<action name="UserRegistCompleteAction" class="com.internousdev.bioral.action.UserRegistCompleteAction" method="execute">
+		<result name="success">userRegistComplete.jsp</result>
+		<result name="error">userRegist.jsp</result>
+	</action>
+
+
+	<!-- 管理者ページ-ユーザー一覧関係 -->
+	<action name="UserListAction" class="com.internousdev.bioral.action.UserListAction" method="execute">
+		<result name="success">adminUserList.jsp</result>
+		<result name="error">admin.jsp</result>
+	</action>
+
+	<action name="AdminUserDetailAction" class="com.internousdev.bioral.action.AdminUserDetailAction" method="execute">
+		<result name="success">adminUserDetail.jsp</result>
+		<result name="error">adminUserList.jsp</result>
+	</action>
+
+<!--  -->
+	<!-- 管理者ページ-ユーザー更新関係 -->
+	<action name="UserUpdateAction" class="com.internousdev.bioral.action.UserUpdateAction" method="execute">
+		<result name="success">adminUserUpdate.jsp</result>
+		<result name="error">adminUserList.jsp</result>
+	</action>
+
+	<action name="UserUpdateConfirmAction" class="com.internousdev.bioral.action.UserUpdateConfirmAction" method="execute">
+		<result name="success">adminUserUpdateConfirm.jsp</result>
+		<result name="error">adminUserUpdate.jsp</result>
+	</action>
+
+	<action name="UserUpdateCompleteAction" class="com.internousdev.bioral.action.UserUpdateCompleteAction" method="execute">
+		<result name="success">adminUserUpdateComplete.jsp</result>
+		<result name="error">adminUserUpdate.jsp</result>
+	</action>
+
+
+	<!-- 管理者ページ-ユーザー削除関係 -->
+	<action name="AdminUserDeleteAction" class="com.internousdev.bioral.action.AdminUserDeleteAction" method="execute">
+		<result name="success">adminUserDelete.jsp</result>
+		<result name="error">adminUserList.jsp</result>
+	</action>
+
+	<!-- <action name="AdminUserDeleteCompleteAction" class="com.internousdev.bioral.action.AdminUserDeleteCompleteAction" method="execute">
+		<result name="success">adminUserDeleteComplete.jsp</result>
+		<result name="error">adminUserList.jsp</result>
+	</action> -->
+
+	<!-- 管理者ページ-管理者データ関係 -->
+	<action name="AdminAllSelectAction" class="com.internousdev.bioral.action.AdminAllSelectAction" method="execute">
+		<result name="success">adminAllDate.jsp</result>
+		<result name="error">admin.jsp</result>
+	</action>
+
+
+	</package>
+</struts>

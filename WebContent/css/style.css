@@ -1,0 +1,674 @@
+@CHARSET "UTF-8";
+
+/* メインレイアウト */
+body {
+	position: absolute;
+	overflow: auto;
+	top: 0;
+	left: 0;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	min-height: 100%; font-family : Verdana, Helvetica, sans-serif;
+	font-size: 20px;
+	background-image: url("../images/background/color.png");
+	background-size: cover;
+	background-attachment: fixed;
+	box-shadow: inset 0 0 15px 15px rgba(0, 0, 0, 0.1);
+	font-family: Verdana, Helvetica, sans-serif
+}
+
+#contents {
+	background-color: rgba(255, 255, 255, 0.8); /* 白色 */
+	width: 80%;
+	margin: 80px auto;
+	overflow: auto;
+	padding: 40px 30px 80px 30px;
+	box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+#contents2 {
+	background-color: rgba(255, 255, 255, 0.5); /* 白色 */
+	width: 80%;
+	margin: 80px auto;
+	overflow: auto;
+	padding: 40px 30px 80px 30px;
+	box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+#main-box {
+	width: 80%;
+	padding: 40px 15px 40px 15px;
+	margin: 0 auto;
+	background-color: #FBFAF5; /* 生成り色 */
+	overflow: auto;
+	border-radius: 25px 25px 25px 25px;
+}
+
+/* エラーメッセージ書式設定 */
+#error-message1{
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 16px;
+	color: black;
+}
+
+/* #error-message1:before{ */
+/* 	content:"※"; */
+/* } */
+
+/* フッターレイアウト */
+#footer {
+	position:absolute;
+	bottom:0;
+	clear: both;
+	text-align: center;
+	padding-top: 10px;
+	width: 100%;
+	font-weight: 900;
+	font-size: 140%;
+	font-family: 'Mv Boli', cursive;
+	color: white;
+}
+
+
+
+/* 一覧テーブルレイアウト */
+/* .horizontal-list-table { */
+/* 	color: rgb(0, 0, 0); */
+/* 	border-collapse: collapse; */
+
+/* } */
+
+/* table.horizontal-list-table, th, td { */
+/*     margin:10%; */
+/* 	width: 10%; */
+/* 	color: rgb(0, 0, 0); */
+/* 	text-align:center; */
+/*     border: 2px #808080 solid; */
+/*     border-collapse: collapse; */
+/* 	white-space: nowrap; */
+
+/* } */
+
+/* table.horizontal-list-table th { */
+/* 	width: 150px; */
+/* 	padding: 10px; */
+/* 	color: rgb(255, 255, 255); */
+/* 	background-color: rgb(0, 0, 0); */
+/* 	font-weight: bold; */
+/* 	font-size: 0.8em; */
+/* 	text-align: center; */
+/* 	vertical-align: top; */
+/* 	white-space: nowrap; */
+/* } */
+
+/* table.horizontal-list-table td { */
+/* 	width: 15px; */
+/* 	padding: 30px; */
+/* 	color: rgb(0, 0, 0); */
+/* 	font-size: 0.8em; */
+/* 	text-align: center; */
+/* 	vertical-align: top; */
+/* 	white-space: nowrap; */
+/* } */
+
+/* /* 完了メッセージレイアウト */
+*
+/
+/* #complete-box { */
+/* 	text-align:center; */
+/* 	font-size:120%; */
+/* 	font-family:'arial black'; */
+/* 	width:50%; */
+/* 	height:30%; */
+/* 	padding:10%; */
+/* 	margin:15% 15%; */
+/* 	background-color: rgba(255, 255, 255, 0.9); */
+/* 	border-radius:5% ; */
+/* 	white-space: nowrap; */
+
+/* 	} */
+
+/* /* 確認フォームレイアウト */
+
+*
+/
+/* table.vertical-list-table { */
+/* 			margin:auto; */
+/*             overflow: hidden; */
+/* 			width: 70%; */
+/* 			text-align: center; */
+/* 			font-size: 1.4rem; */
+/* 			line-height: 1.5; */
+
+/* } */
+
+/* table.vertical-list-table th { */
+/* 	width: 40%; */
+/* 	padding: 1px; */
+/* 	font-weight: 400; */
+/* 	vertical-align: top; */
+
+/* } */
+
+/* table.vertical-list-table td { */
+/* 	width: 50%; */
+/* 	padding: 8px; */
+/* 	vertical-align: top; */
+/* 	color:black; */
+
+/* } */
+
+/* table.vertical-list-table, th, td { */
+/* 	line-height: 1.5; */
+/* } */
+
+/* /* 入力フォーム＆ボタンレイアウト */
+
+*
+/
+/* #form { */
+/* 	font-family: Verdana, Helvetica, sans-serif; */
+/* 	font-size: 18px; */
+/* } */
+
+/* #errormessage-form { */
+/* 	/* border: 1px solid rgba(0, 0, 150, 0.4); */
+
+*
+/
+/* 	background-color: rgba(0, 0, 255, 0.1); */
+/* 	font-family: Verdana, Helvetica, sans-serif; */
+/* 	font-size: 16px; */
+/* 	width: 40%; */
+/* 	margin: 0 6% 0 4%; */
+/* 	text-align: left; */
+/* 	float: right; */
+/* 	width: 40%; */
+/* 	color: black; */
+/* 	border-radius: 25px 25px 25px 25px/25px 25px 25px 25px; */
+/* } */
+
+/* #input-form { */
+/* 	border: 1px solid rgba(0, 0, 150, 0.4); */
+/* 	width: 40%; */
+/* 	height: 50%; */
+/* 	margin: 0 4% 0 6%; */
+/* 	padding: 2% 0; */
+/* 	text-align: center; */
+/* 	border-radius: 25px 25px 25px 25px/25px 25px 25px 25px; */
+/* 	text-align: center; */
+/* } */
+
+/* #vertical-list-table { */
+/* 	margin: 0 auto; */
+/* } */
+
+/* #clear { */
+/* 	clear: both; */
+/* } */
+
+/* .error-message { */
+/* 	padding: 2%; */
+/* } */
+
+/* /* ボタンのCSS(クラスはbttn-unite bttn-sm bttn-primaryの３つを設定してください。------------- */
+
+*
+/
+/* .bttn-primary, .bttn, .bttn-lg, .bttn-md, .bttn-sm, .bttn-xs { */
+/* 	color: #1d89ff; */
+/* } */
+
+/* .bttn, .bttn-lg, .bttn-md, .bttn-sm, .bttn-xs { */
+/* 	margin: 0; */
+/* 	padding: 0; */
+/* 	border-width: 0; */
+/* 	border-color: transparent; */
+/* 	background: transparent; */
+/* 	font-weight: 400; */
+/* 	cursor: pointer; */
+/* 	position: relative; */
+/* } */
+
+/* .bttn-sm { */
+/* 	padding: 4px 10px; */
+/* 	font-size: 16px; */
+/* 	font-family: inherit; */
+/* } */
+
+/* .bttn-unite { */
+/* 	margin: 0; */
+/* 	padding: 0; */
+/* 	border-width: 0; */
+/* 	border-color: transparent; */
+/* 	background: transparent; */
+/* 	font-weight: 400; */
+/* 	cursor: pointer; */
+/* 	position: relative; */
+/* 	font-size: 20px; */
+/* 	font-family: inherit; */
+/* 	padding: 5px 12px; */
+/* 	z-index: 0; */
+/* 	overflow: hidden; */
+/* 	border: 1px solid #1d89ff; */
+/* 	border-radius: 100px; */
+/* 	/* background: #fff; ←元の色（ボタン背景）*/
+
+*
+/
+/* 	background: transparent; */
+/* 	color: #1d89ff; */
+/* 	-webkit-transition: color 0.3s cubic-bezier(0.02, 0.01, 0.47, 1), */
+/* 		border-color 0.3s cubic-bezier(0.02, 0.01, 0.47, 1); */
+/* 	transition: color 0.3s cubic-bezier(0.02, 0.01, 0.47, 1), border-color */
+/* 		0.3s cubic-bezier(0.02, 0.01, 0.47, 1); */
+/* 	color: #1d89ff; */
+/* } */
+
+/* .bttn-unite:before { */
+/* 	position: absolute; */
+/* 	top: 0; */
+/* 	left: 0; */
+/* 	width: 100%; */
+/* 	height: 120%; */
+/* 	background: #d6e3ff; */
+/* 	content: ''; */
+/* 	opacity: 0; */
+/* 	z-index: -1; */
+/* 	-webkit-transition: opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), */
+/* 		-webkit-transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1); */
+/* 	transition: opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), */
+/* 		-webkit-transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1); */
+/* 	transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity */
+/* 		0.15s cubic-bezier(0.02, 0.01, 0.47, 1); */
+/* 	transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity */
+/* 		0.15s cubic-bezier(0.02, 0.01, 0.47, 1), -webkit-transform 0.15s */
+/* 		cubic-bezier(0.02, 0.01, 0.47, 1); */
+/* 	-webkit-transform: translate3d(-110%, -10%, 0) skewX(-20deg); */
+/* 	transform: translate3d(-110%, -10%, 0) skewX(-20deg); */
+/* } */
+
+/* .bttn-unite:after { */
+/* 	position: absolute; */
+/* 	top: 0; */
+/* 	left: 0; */
+/* 	width: 100%; */
+/* 	height: 120%; */
+/* 	background: rgba(214, 227, 255, 0.7); */
+/* 	content: ''; */
+/* 	opacity: 0; */
+/* 	z-index: -1; */
+/* 	-webkit-transition: opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), */
+/* 		-webkit-transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1); */
+/* 	transition: opacity 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), */
+/* 		-webkit-transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1); */
+/* 	transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity */
+/* 		0.15s cubic-bezier(0.02, 0.01, 0.47, 1); */
+/* 	transition: transform 0.15s cubic-bezier(0.02, 0.01, 0.47, 1), opacity */
+/* 		0.15s cubic-bezier(0.02, 0.01, 0.47, 1), -webkit-transform 0.15s */
+/* 		cubic-bezier(0.02, 0.01, 0.47, 1); */
+/* 	-webkit-transform: translate3d(110%, -10%, 0) skewX(-20deg); */
+/* 	transform: translate3d(110%, -10%, 0) skewX(-20deg); */
+/* } */
+
+/* .bttn-unite:hover, .bttn-unite:focus { */
+/* 	box-shadow: 0 1px 8px rgba(58, 51, 53, 0.3); */
+/* 	color: #1d89ff; */
+/* 	-webkit-transition: all 0.5s cubic-bezier(0.02, 0.01, 0.47, 1); */
+/* 	transition: all 0.5s cubic-bezier(0.02, 0.01, 0.47, 1); */
+/* } */
+
+/* .bttn-unite:hover:before, .bttn-unite:focus:before { */
+/* 	opacity: 1; */
+/* 	-webkit-transition: opacity 0.25s cubic-bezier(0.02, 0.01, 0.47, 1), */
+/* 		-webkit-transform 0.25s cubic-bezier(0.02, 0.01, 0.47, 1); */
+/* 	transition: opacity 0.25s cubic-bezier(0.02, 0.01, 0.47, 1), */
+/* 		-webkit-transform 0.25s cubic-bezier(0.02, 0.01, 0.47, 1); */
+/* 	transition: transform 0.25s cubic-bezier(0.02, 0.01, 0.47, 1), opacity */
+/* 		0.25s cubic-bezier(0.02, 0.01, 0.47, 1); */
+/* 	transition: transform 0.25s cubic-bezier(0.02, 0.01, 0.47, 1), opacity */
+/* 		0.25s cubic-bezier(0.02, 0.01, 0.47, 1), -webkit-transform 0.25s */
+/* 		cubic-bezier(0.02, 0.01, 0.47, 1); */
+/* 	-webkit-transform: translate3d(-50%, -10%, 0) skewX(-20deg); */
+/* 	transform: translate3d(-50%, -10%, 0) skewX(-20deg); */
+/* } */
+
+/* .bttn-unite:hover:after, .bttn-unite:focus:after { */
+/* 	opacity: 1; */
+/* 	-webkit-transition: opacity 0.25s cubic-bezier(0.02, 0.01, 0.47, 1), */
+/* 		-webkit-transform 0.25s cubic-bezier(0.02, 0.01, 0.47, 1); */
+/* 	transition: opacity 0.25s cubic-bezier(0.02, 0.01, 0.47, 1), */
+/* 		-webkit-transform 0.25s cubic-bezier(0.02, 0.01, 0.47, 1); */
+/* 	transition: transform 0.25s cubic-bezier(0.02, 0.01, 0.47, 1), opacity */
+/* 		0.25s cubic-bezier(0.02, 0.01, 0.47, 1); */
+/* 	transition: transform 0.25s cubic-bezier(0.02, 0.01, 0.47, 1), opacity */
+/* 		0.25s cubic-bezier(0.02, 0.01, 0.47, 1), -webkit-transform 0.25s */
+/* 		cubic-bezier(0.02, 0.01, 0.47, 1); */
+/* 	-webkit-transform: translate3d(50%, -10%, 0) skewX(-20deg); */
+/* 	transform: translate3d(50%, -10%, 0) skewX(-20deg); */
+/* } */
+
+/* .bttn-unite.bttn-sm { */
+/* 	padding: 4px 10px; */
+/* 	font-size: 16px; */
+/* 	font-family: inherit; */
+/* } */
+
+/* .bttn-unite.bttn-sm:hover, .bttn-unite.bttn-sm:focus { */
+/* 	box-shadow: 0 1px 6px rgba(58, 51, 53, 0.3); */
+/* } */
+
+/* .bttn-unite.bttn-md:hover, .bttn-unite.bttn-md:focus { */
+/* 	box-shadow: 0 1px 8px rgba(58, 51, 53, 0.3); */
+/* } */
+
+/* .bttn-unite.bttn-lg { */
+/* 	padding: 8px 15px; */
+/* 	font-size: 24px; */
+/* 	font-family: inherit; */
+/* } */
+
+/* .bttn-unite.bttn-lg:hover, .bttn-unite.bttn-lg:focus { */
+/* 	box-shadow: 0 1px 10px rgba(58, 51, 53, 0.3); */
+/* } */
+
+/* .bttn-unite.bttn-default { */
+/* 	border-color: #1d89ff; */
+/* 	color: #1d89ff; */
+/* } */
+
+/* .bttn-unite.bttn-default:hover, .bttn-unite.bttn-default:focus { */
+/* 	background: #d6e3ff; */
+/* 	color: #1d89ff; */
+/* } */
+
+/* .bttn-unite.bttn-primary { */
+/* 	border-color: #1d89ff; */
+/* 	color: #1d89ff; */
+/* } */
+
+/* .bttn-unite.bttn-primary:hover, .bttn-unite.bttn-primary:focus { */
+/* 	background: #1d89ff; */
+/* 	color: #fff; */
+/* } */
+
+/* .bttn-unite.bttn-primary:before { */
+/* 	background: #006de3; */
+/* } */
+
+/* .bttn-unite.bttn-primary:after { */
+/* 	background: #1d89ff; */
+/* } */
+/* /* --------------------------------------------- */
+
+*
+/
+
+/* /* 入力フォーム---------------------------------- */
+
+*
+/
+/* .fade-background { */
+/* 	display: inline-block; transition-duration : 0.5s; */
+/* 	margin: 2% 0; */
+/* 	/* margin: 2em 1.25%; */
+
+*
+/
+/* 	-webkit-appearance: none; */
+/* 	-moz-appearance: none; */
+/* 	-ms-appearance: none; */
+/* 	-o-appearance: none; */
+/* 	appearance: none; */
+/* 	background: transparent; */
+/* 	/* border: 2px solid #FFFFFF; */
+
+*
+/
+/* 	border: 1px solid lightgray; */
+/* 	/* border: 0; */
+
+*
+/
+/* 	padding: .25em .65em; */
+/* 	outline: none; */
+/* 	border-radius: 0px; */
+/* 	text-align: center; */
+/* 	padding: .25em .65em; */
+/* 	transition-duration: 0.5s; */
+/* } */
+
+/* .fade-background:hover { */
+/* 	transform: translateY(-3px); */
+/* 	-webkit-transform: translateY(-3px); */
+/* } */
+
+/* .fade-background:active, .fade-background:focus { */
+/* 	-webkit-animation: background 0.55s ease-in; */
+/* 	-moz-animation: background 0.55s ease-in; */
+/* 	animation: background 0.55s ease-in; */
+/* 	background: #FFFFFF; */
+/* 	color: #54D7BA; */
+/* } */
+
+/* .fade-background:active::-webkit-input-placeholder, .fade-background:focus::-webkit-input-placeholder */
+/* 	{ */
+/* 	color: #54D7BA; */
+/* 	text-align: center; */
+/* } */
+
+/* .fade-background:active::-moz-placeholder, .fade-background:focus::-moz-placeholder */
+/* 	{ */
+/* 	color: #54D7BA; */
+/* 	text-align: center; */
+/* } */
+
+/* .fade-background:active:-moz-placeholder, .fade-background:focus:-moz-placeholder */
+/* 	{ */
+/* 	color: #54D7BA; */
+/* 	text-align: center; */
+/* } */
+
+/* .fade-background:active:-ms-input-placeholder, .fade-background:focus:-ms-input-placeholder */
+/* 	{ */
+/* 	color: #54D7BA; */
+/* 	text-align: center; */
+/* } */
+
+/* ヘッダーレイアウト */
+/* #headerreturnbutton{ */
+/*     position: fixed; */
+/*     right:3.7%; */
+/*     top:2%; */
+/*     z-index:200; */
+/*     opacity:1.0; */
+/*     transition: 0.3s; */
+/*     cursor: pointer; */
+/* } */
+
+/* #headerreturnbutton_delete{ */
+/*     position: fixed; */
+/*     right:3.7%; */
+/*     top:2%; */
+/*     opacity:0; */
+/*     transition: 0.3s; */
+/*      transform: translateX(50%); */
+/* } */
+/* #headerreturnbutton img{ */
+/*     width:45px; */
+/*     height:45px; */
+/* } */
+/* #headerreturnbutton_delete img{ */
+/*     width:45px; */
+/*     height:45px; */
+/* } */
+
+/* #header{ */
+/*     position:fixed; */
+/*     top:0px; */
+/*     right:0px; */
+/*     width:12%; */
+/*     height:100vh; */
+/*     border: solid 2px white; */
+/*     transition: 0.2s; */
+/*     z-index: 257; */
+/* } */
+/* #header_delete{ */
+/*     position:fixed; */
+/*     top:0px; */
+/*     right:0px; */
+/*     width:12%; */
+/*     height:100vh; */
+/*     border: solid 2px white; */
+/*     transform: translateX(100%); */
+/*     transition: 0.3s; */
+/*     opacity:0; */
+/* } */
+
+/* #header_bg{ */
+/*     position: absolute; */
+/*     top:0px; */
+/*     width:100%; */
+/*     height:100%; */
+/*     background-color: black; */
+/*     opacity: 0.4; */
+/*     z-index: -4 */
+/* } */
+
+/* #returnBox{ */
+/*     position:relative; */
+/*     top:0px; */
+/* 	width:100%; */
+/* 	height:20%; */
+/*     background-color: white; */
+/* } */
+
+/* #headerbutton{ */
+/*     position:absolute; */
+/*     top:20%; */
+/*     left:20%; */
+/*     cursor: pointer; */
+/*     width:60%; */
+/*     height:60%; */
+/*     transition-duration: 0.3s; */
+/* } */
+
+/* #headerbutton:hover{ */
+
+/*     transform: scale(1.4,1.4) */
+/* } */
+
+/* .searchbox{ */
+/*     position:relative; */
+/* 	width:100%; */
+/* 	height:20vh; */
+/* } */
+
+/* .se3:hover{ */
+/* 	color:white; */
+/* 	background-color:black; */
+
+/* } */
+/* .menuBox input:hover{ */
+/* 	color:white; */
+/* 	background-color:black; */
+
+/* } */
+
+/* .menuBox{ */
+/*     position:relative; */
+/* 	width:100%; */
+/* 	height:25vh; */
+/* } */
+
+/* .se1, .se2, .se3{ */
+/*     width:100%; */
+/*     height:calc(100% / 3); */
+/* } */
+
+/* .men{ */
+/*     width:100%; */
+/*     height:calc(100% / 4); */
+/*     cursor: pointer; */
+/* } */
+
+/* .whitemen{ */
+/*     width:100%; */
+/*     height:calc(100% / 4); */
+/*     background-color:white; */
+/* } */
+
+/* header input{ */
+/* 	padding:0px; */
+/*     border:0px; */
+/*     background-color:white; */
+/*     transition-duration:0.18s; */
+/* } */
+
+/* #jenre_size{ */
+/*     position: relative; */
+/*     top:2.5%; */
+
+/*     width:100%; */
+/*     height:95.5%; */
+/*     padding:0px; */
+/*     border:0px; */
+
+/* } */
+/* #word_size{ */
+/*     position: relative; */
+/*     width:100%; */
+/*     height:97.5%; */
+/*     padding:0px; */
+/*     border:0px; */
+
+/* } */
+/* #search_btn_size{ */
+/*     position: relative; */
+/*     width:100%; */
+/*     height:98%; */
+/*     padding:0px; */
+/*     border:0px; */
+/*     background-color:white; */
+/* } */
+
+/* #txt_space1{ */
+/*     position: absolute; */
+/*     top:2%; */
+/*     left:0%; */
+/*     width:100%; */
+/*     height:98%; */
+/*     background-color: white; */
+/* } */
+
+/* #txt_space1 p{ */
+/*     text-align: center; */
+/*     margin:10px; */
+/* } */
+/* #loginMenu,#CartMenu,#ProductListMenu,#MyPageMenu{ */
+/*     position:relative; */
+/*     width:100%; */
+/*     height:calc(100% / 4); */
+/*     cursor: pointer; */
+/*     transition-duration:0.3s; */
+/*     transition-delay: 0.2s; */
+/* } */
+
+/* #mds1 p{ */
+/*     color:white; */
+/*     text-align: center; */
+/* } */
+
+/* #complete-box { */
+/* 	text-align: center; */
+/* 	font-size: 150%; */
+/* 	font-family: 'arial black'; */
+/* 	width: 50%; */
+/* 	height: 30%; */
+/* 	padding: 10%; */
+/* 	margin: 15% 15%; */
+/* 	background-color: rgba(255, 255, 255, 0.9); */
+/* 	border-radius: 5%; */
+/* } */
